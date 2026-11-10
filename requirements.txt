@@ -1,6 +1,11 @@
 # Phase 1 (Pursuit). The [sisl] extra is required for the Pursuit environment.
 pettingzoo[sisl]
 
+# PPO dependencies (Based on 25/10/2026 meeting minutes)
+supersuit
+stable-baselines3
+torch
+
 # Tests
 pytest
 
