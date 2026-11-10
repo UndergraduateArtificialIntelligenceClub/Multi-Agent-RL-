@@ -32,11 +32,11 @@ def main() -> None:
     # train PPO policy
     model = PPO("MlpPolicy", env, verbose=1)
     model.learn(total_timesteps=args.timesteps)
-    
+
     # mkdir -p to output folder and save PPO weights
     args.output.parent.mkdir(parents=True, exist_ok=True)
     model.save(str(args.output))
-    print(f"Saved PPO model to {args.output}.zip")
+    print(f"Saved PPO model to {args.output}.zip")    
 
 
 if __name__ == "__main__":
