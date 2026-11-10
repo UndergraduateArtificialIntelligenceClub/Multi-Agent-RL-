@@ -3,7 +3,11 @@
 Plan: wrap the parallel Pursuit env with SuperSuit, train with Stable-Baselines3 (PPO),
 log to Weights & Biases, save to checkpoints/ (see checkpoints/README.md).
 
-    python -m phase1_pursuit.train
+    python -m phase1_pursuit.train 
+    (defaults: 10k timesteps, output to checkpoints/phase1_pursuit_ppo)
+
+    NEW COMMAND EXTENSION (XX is changeable in command line):
+    python -m phase1_pursuit.train --timesteps XX --output checkpoints/XX
 """
 
 import argparse  # not necessary, but facilitates timestep test runs and output path changes
