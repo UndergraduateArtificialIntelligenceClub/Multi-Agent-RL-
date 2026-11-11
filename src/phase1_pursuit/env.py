@@ -13,3 +13,8 @@ def make_pursuit(render_mode: str | None = None, **kwargs):
     environment (e.g. n_pursuers, n_evaders, max_cycles).
     """
     return make("parallel", PURSUIT_ID, render_mode=render_mode, **kwargs)
+
+
+def evaders_captured(env) -> int:
+    """Number of evaders caught so far in the current episode."""
+    return int(env.unwrapped.env.evaders_gone.sum())
